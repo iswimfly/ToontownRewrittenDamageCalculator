@@ -1,5 +1,5 @@
 # ToontownRewrittenDamageCalculator
-A small program that can accurately calculate the damage of a TTR fight. Requires [.Net 6.0](https://dotnet.microsoft.com/en-us/download) to work.
+A small program that can accurately calculate the damage of a TTR fight. Requires [.NET 6.0](https://dotnet.microsoft.com/en-us/download) to work.
 
 This calculator (currently) covers any fight mechanic outside of The Boiler boss fight, excluding SOS Cards, Pink Slips, and Remotes. 
 I do not plan on covering the Boiler or any other "Special" bosses being added to TTR. 
