@@ -9,7 +9,7 @@ I do not plan on covering the Boiler or any other "Special" bosses being added t
 If anything I'll branch off from this or fork it into its own tool because that fight adds a whole additional layer of complexity that isn't needed outside of that fight right now.
 
 Current Features:
-- Level 1 - 20 Cogs
+- 4 Different Level 1 - 20 Cogs (Cogs sort Right to Left as TTR does)
 - Version 2.0 Cog Support
 - Organic and Non-maxed Gag Support
 
