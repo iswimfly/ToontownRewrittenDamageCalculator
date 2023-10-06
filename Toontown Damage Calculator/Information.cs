@@ -176,6 +176,7 @@ namespace Toontown_Damage_Calculator
     {
         public Gag chosenGag = new Gag();
         public int damage = 0;
+        public int notMaxed = 0;
         public int target;
     }
     public class Gag
@@ -193,6 +194,7 @@ namespace Toontown_Damage_Calculator
         public bool lured = false;
         public int luredTurns = 0;
         public int trapGag = 0;
+        public int trapDamage = 0;
         public bool trapOrganic;
         public bool ver2 = false;
         public int health;
@@ -209,16 +211,9 @@ namespace Toontown_Damage_Calculator
             }
             else
             {
-                if (attack.chosenGag.maxed)
-                {
-                    trapGag = attack.chosenGag.gagTier;
-                    trapOrganic = attack.chosenGag.organic;
-                }
-                else
-                {
-                    trapGag = attack.chosenGag.maxedDamage;
-                    trapOrganic = attack.chosenGag.organic;
-                }
+                trapGag = attack.chosenGag.gagTier;
+                trapDamage = attack.notMaxed;
+                trapOrganic = attack.chosenGag.organic;
             }
         }
         public void Lured()
@@ -230,9 +225,9 @@ namespace Toontown_Damage_Calculator
                 {
                     if (ver2)
                     {
-                        if (trapGag > 7)
+                        if (trapDamage != 0)
                         {
-                            damage = trapGag - Ver2Armor();
+                            damage = trapDamage - Ver2Armor();
                         }
                         else
                         {
@@ -241,9 +236,9 @@ namespace Toontown_Damage_Calculator
                     }
                     else
                     {
-                        if (trapGag > 7)
+                        if (trapDamage != 0)
                         {
-                            damage = trapGag - Ver2Armor();
+                            damage = trapDamage - Ver2Armor();
                         }
                         else
                         {
@@ -255,9 +250,9 @@ namespace Toontown_Damage_Calculator
                 {
                     if (ver2)
                     {
-                        if (trapGag > 7)
+                        if (trapDamage != 0)
                         {
-                            damage = trapGag - Ver2Armor();
+                            damage = trapDamage - Ver2Armor();
                         }
                         else
                         {
@@ -266,9 +261,9 @@ namespace Toontown_Damage_Calculator
                     }
                     else
                     {
-                        if (trapGag > 7)
+                        if (trapDamage != 0)
                         {
-                            damage = trapGag - Ver2Armor();
+                            damage = trapDamage - Ver2Armor();
                         }
                         else
                         {
@@ -320,13 +315,27 @@ namespace Toontown_Damage_Calculator
                         }
                         else
                         {
-                            if (ver2)
+                            if (gags[i] > 7)
                             {
-                                totalDamage += Convert.ToInt32(Math.Ceiling((decimal)(Information.sound.Organic[gags[i]] - Ver2Armor())));
+                                if (ver2)
+                                {
+                                    totalDamage += gags[i] - Ver2Armor();
+                                }
+                                else
+                                {
+                                    totalDamage += gags[i];
+                                }
                             }
                             else
                             {
-                                totalDamage += (Information.sound.Organic[gags[i]]);
+                                if (ver2)
+                                {
+                                    totalDamage += Convert.ToInt32(Math.Ceiling((decimal)(Information.sound.Normal[gags[i]] - Ver2Armor())));
+                                }
+                                else
+                                {
+                                    totalDamage += (Information.sound.Normal[gags[i]]);
+                                }
                             }
                         }
                         if (gags.Count > 1)
@@ -366,13 +375,27 @@ namespace Toontown_Damage_Calculator
                         }
                         else
                         {
-                            if (ver2)
+                            if (gags[i] > 7)
                             {
-                                totalDamage += Convert.ToInt32(Math.Ceiling((decimal)(Information.throwTrack.Organic[gags[i]] - Ver2Armor())));
+                                if (ver2)
+                                {
+                                    totalDamage += gags[i] - Ver2Armor();
+                                }
+                                else
+                                {
+                                    totalDamage += gags[i];
+                                }
                             }
                             else
                             {
-                                totalDamage += (Information.throwTrack.Organic[gags[i]]);
+                                if (ver2)
+                                {
+                                    totalDamage += Convert.ToInt32(Math.Ceiling((decimal)(Information.throwTrack.Normal[gags[i]] - Ver2Armor())));
+                                }
+                                else
+                                {
+                                    totalDamage += (Information.throwTrack.Normal[gags[i]]);
+                                }
                             }
                         }
                         if (gags.Count > 1)
@@ -413,13 +436,27 @@ namespace Toontown_Damage_Calculator
                         }
                         else
                         {
-                            if (ver2)
+                            if (gags[i] > 7)
                             {
-                                totalDamage += Convert.ToInt32(Math.Ceiling((decimal)(Information.squirt.Organic[gags[i]] - Ver2Armor())));
+                                if (ver2)
+                                {
+                                    totalDamage += gags[i] - Ver2Armor();
+                                }
+                                else
+                                {
+                                    totalDamage += gags[i];
+                                }
                             }
                             else
                             {
-                                totalDamage += (Information.squirt.Organic[gags[i]]);
+                                if (ver2)
+                                {
+                                    totalDamage += Convert.ToInt32(Math.Ceiling((decimal)(Information.squirt.Normal[gags[i]] - Ver2Armor())));
+                                }
+                                else
+                                {
+                                    totalDamage += (Information.squirt.Normal[gags[i]]);
+                                }
                             }
                         }
                         if (gags.Count > 1)
@@ -461,13 +498,27 @@ namespace Toontown_Damage_Calculator
                         }
                         else
                         {
-                            if (ver2)
+                            if (gags[i] > 7)
                             {
-                                totalDamage += Convert.ToInt32(Math.Ceiling((decimal)(Information.drop.Organic[gags[i]] - Ver2Armor())));
+                                if (ver2)
+                                {
+                                    totalDamage += gags[i] - Ver2Armor();
+                                }
+                                else
+                                {
+                                    totalDamage += gags[i];
+                                }
                             }
                             else
                             {
-                                totalDamage += (Information.drop.Organic[gags[i]]);
+                                if (ver2)
+                                {
+                                    totalDamage += Convert.ToInt32(Math.Ceiling((decimal)(Information.drop.Normal[gags[i]] - Ver2Armor())));
+                                }
+                                else
+                                {
+                                    totalDamage += (Information.drop.Normal[gags[i]]);
+                                }
                             }
                         }
                         if (gags.Count > 1)

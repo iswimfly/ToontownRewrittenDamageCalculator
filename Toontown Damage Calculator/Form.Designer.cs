@@ -824,6 +824,7 @@
             this.picboxTrap1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picboxTrap1.TabIndex = 103;
             this.picboxTrap1.TabStop = false;
+            this.picboxTrap1.MouseHover += new System.EventHandler(this.picboxTrap1_MouseHover);
             // 
             // picboxTrap2
             // 
@@ -835,6 +836,7 @@
             this.picboxTrap2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picboxTrap2.TabIndex = 104;
             this.picboxTrap2.TabStop = false;
+            this.picboxTrap2.MouseHover += new System.EventHandler(this.picboxTrap2_MouseHover);
             // 
             // picboxTrap3
             // 
@@ -846,6 +848,7 @@
             this.picboxTrap3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picboxTrap3.TabIndex = 105;
             this.picboxTrap3.TabStop = false;
+            this.picboxTrap3.MouseHover += new System.EventHandler(this.picboxTrap3_MouseHover);
             // 
             // picboxTrap4
             // 
@@ -857,6 +860,7 @@
             this.picboxTrap4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picboxTrap4.TabIndex = 106;
             this.picboxTrap4.TabStop = false;
+            this.picboxTrap4.MouseHover += new System.EventHandler(this.picboxTrap4_MouseHover);
             // 
             // comboxTrap1
             // 

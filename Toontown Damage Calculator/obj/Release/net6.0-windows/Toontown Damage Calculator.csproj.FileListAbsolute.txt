@@ -1,0 +1,18 @@
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\bin\Release\net6.0-windows\Toontown Damage Calculator.exe
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\bin\Release\net6.0-windows\Toontown Damage Calculator.deps.json
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\bin\Release\net6.0-windows\Toontown Damage Calculator.runtimeconfig.json
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\bin\Release\net6.0-windows\Toontown Damage Calculator.dll
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\bin\Release\net6.0-windows\Toontown Damage Calculator.pdb
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\obj\Release\net6.0-windows\Toontown Damage Calculator.csproj.AssemblyReference.cache
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\obj\Release\net6.0-windows\Toontown_Damage_Calculator.Form.resources
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\obj\Release\net6.0-windows\Toontown_Damage_Calculator.Properties.Resources.resources
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\obj\Release\net6.0-windows\Toontown Damage Calculator.csproj.GenerateResource.cache
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\obj\Release\net6.0-windows\Toontown Damage Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\obj\Release\net6.0-windows\Toontown Damage Calculator.AssemblyInfoInputs.cache
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\obj\Release\net6.0-windows\Toontown Damage Calculator.AssemblyInfo.cs
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\obj\Release\net6.0-windows\Toontown Damage Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\obj\Release\net6.0-windows\Toontown Damage Calculator.dll
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\obj\Release\net6.0-windows\refint\Toontown Damage Calculator.dll
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\obj\Release\net6.0-windows\Toontown Damage Calculator.pdb
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\obj\Release\net6.0-windows\Toontown Damage Calculator.genruntimeconfig.cache
+C:\Users\Jason\source\repos\ToontownRewrittenDamageCalculator\Toontown Damage Calculator\obj\Release\net6.0-windows\ref\Toontown Damage Calculator.dll

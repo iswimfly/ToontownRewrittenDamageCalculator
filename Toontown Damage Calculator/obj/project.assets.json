@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jason\\Desktop\\Banana Mania Modding\\Toontown Damage Calculator\\Toontown Damage Calculator\\Toontown Damage Calculator.csproj",
-      "projectName": "Toontown Damage Calculator",
-      "projectPath": "C:\\Users\\Jason\\Desktop\\Banana Mania Modding\\Toontown Damage Calculator\\Toontown Damage Calculator\\Toontown Damage Calculator.csproj",
+      "projectUniqueName": "C:\\Users\\Jason\\source\\repos\\ToontownRewrittenDamageCalculator\\Toontown Damage Calculator\\Toontown Rewritten Damage Calculator.csproj",
+      "projectName": "Toontown Rewritten Damage Calculator",
+      "projectPath": "C:\\Users\\Jason\\source\\repos\\ToontownRewrittenDamageCalculator\\Toontown Damage Calculator\\Toontown Rewritten Damage Calculator.csproj",
       "packagesPath": "C:\\Users\\Jason\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jason\\Desktop\\Banana Mania Modding\\Toontown Damage Calculator\\Toontown Damage Calculator\\obj\\",
+      "outputPath": "C:\\Users\\Jason\\source\\repos\\ToontownRewrittenDamageCalculator\\Toontown Damage Calculator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

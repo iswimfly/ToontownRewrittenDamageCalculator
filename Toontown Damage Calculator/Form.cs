@@ -756,36 +756,24 @@ namespace Toontown_Damage_Calculator
 
             if (chkboxMaxed1.Checked)
             {
-                toon1.attack.chosenGag.gagTier = Convert.ToInt32(txtboxMaxed1.Text);
+                toon1.attack.notMaxed = Convert.ToInt32(txtboxMaxed1.Text);
             }
-            else
-            {
-                toon1.attack.chosenGag.gagTier = comboxGag1.SelectedIndex;
-            }
+            toon1.attack.chosenGag.gagTier = comboxGag1.SelectedIndex;
             if (chkboxMaxed2.Checked)
             {
-                toon2.attack.chosenGag.gagTier = Convert.ToInt32(txtboxMaxed2.Text);
+                toon2.attack.notMaxed = Convert.ToInt32(txtboxMaxed2.Text);
             }
-            else
-            {
-                toon2.attack.chosenGag.gagTier = comboxGag2.SelectedIndex;
-            }
+            toon2.attack.chosenGag.gagTier = comboxGag2.SelectedIndex;
             if (chkboxMaxed3.Checked)
             {
-                toon3.attack.chosenGag.gagTier = Convert.ToInt32(txtboxMaxed3.Text);
+                toon3.attack.notMaxed = Convert.ToInt32(txtboxMaxed3.Text);
             }
-            else
-            {
-                toon3.attack.chosenGag.gagTier = comboxGag3.SelectedIndex;
-            }
+            toon3.attack.chosenGag.gagTier = comboxGag3.SelectedIndex;
             if (chkboxMaxed4.Checked)
             {
-                toon4.attack.chosenGag.gagTier = Convert.ToInt32(txtboxMaxed4.Text);
+                toon4.attack.notMaxed = Convert.ToInt32(txtboxMaxed4.Text);
             }
-            else
-            {
-                toon4.attack.chosenGag.gagTier = comboxGag4.SelectedIndex;
-            }
+            toon4.attack.chosenGag.gagTier = comboxGag4.SelectedIndex;
 
             if (!comboxTarget1.Text.Contains('-'))
             {
@@ -940,7 +928,14 @@ namespace Toontown_Damage_Calculator
             {
                 if (attack.chosenGag.gagTrack == 3)
                 {
-                    gagTiers.Add(attack.chosenGag.gagTier);
+                    if (attack.notMaxed != 0)
+                    {
+                        gagTiers.Add(attack.notMaxed);
+                    }
+                    else
+                    {
+                        gagTiers.Add(attack.chosenGag.gagTier);
+                    }
                     gagOrganic.Add(attack.chosenGag.organic);
                     targets.Add(attack.target);
                 }
@@ -1000,24 +995,44 @@ namespace Toontown_Damage_Calculator
                     }
                     if (hit)
                     {
-                        gagTier1.Add(attack.chosenGag.gagTier);
+                        if (attack.notMaxed != 0)
+                        {
+                            gagTier1.Add(attack.notMaxed);
+                            gagTier2.Add(attack.notMaxed);
+                            gagTier3.Add(attack.notMaxed);
+                            gagTier4.Add(attack.notMaxed);
+                        }
+                        else
+                        {
+                            gagTier1.Add(attack.chosenGag.gagTier);
+                            gagTier2.Add(attack.chosenGag.gagTier);
+                            gagTier3.Add(attack.chosenGag.gagTier);
+                            gagTier4.Add(attack.chosenGag.gagTier);
+                        }
                         gagOrganic1.Add(attack.chosenGag.organic);
-                        gagTier2.Add(attack.chosenGag.gagTier);
                         gagOrganic2.Add(attack.chosenGag.organic);
-                        gagTier3.Add(attack.chosenGag.gagTier);
                         gagOrganic3.Add(attack.chosenGag.organic);
-                        gagTier4.Add(attack.chosenGag.gagTier);
                         gagOrganic4.Add(attack.chosenGag.organic);
                     }
                     else if (MessageBox.Show($"Did your {Information.throwGags[attack.chosenGag.gagTier - 1]} hit?", "Gag Hit?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
-                        gagTier1.Add(attack.chosenGag.gagTier);
+                        if (attack.notMaxed != 0)
+                        {
+                            gagTier1.Add(attack.notMaxed);
+                            gagTier2.Add(attack.notMaxed);
+                            gagTier3.Add(attack.notMaxed);
+                            gagTier4.Add(attack.notMaxed);
+                        }
+                        else
+                        {
+                            gagTier1.Add(attack.chosenGag.gagTier);
+                            gagTier2.Add(attack.chosenGag.gagTier);
+                            gagTier3.Add(attack.chosenGag.gagTier);
+                            gagTier4.Add(attack.chosenGag.gagTier);
+                        }
                         gagOrganic1.Add(attack.chosenGag.organic);
-                        gagTier2.Add(attack.chosenGag.gagTier);
                         gagOrganic2.Add(attack.chosenGag.organic);
-                        gagTier3.Add(attack.chosenGag.gagTier);
                         gagOrganic3.Add(attack.chosenGag.organic);
-                        gagTier4.Add(attack.chosenGag.gagTier);
                         gagOrganic4.Add(attack.chosenGag.organic);
                     }
                     
@@ -1028,19 +1043,47 @@ namespace Toontown_Damage_Calculator
                     switch (attack.target)
                     {
                         case 1:
-                            gagTier1.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier1.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier1.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic1.Add(attack.chosenGag.organic);
                             break;
                         case 2:
-                            gagTier2.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier2.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier2.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic2.Add(attack.chosenGag.organic);
                             break;
                         case 3:
-                            gagTier3.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier3.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier3.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic3.Add(attack.chosenGag.organic);
                             break;
                         case 4:
-                            gagTier4.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier4.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier4.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic4.Add(attack.chosenGag.organic);
                             break;
                     }
@@ -1050,19 +1093,47 @@ namespace Toontown_Damage_Calculator
                     switch (attack.target)
                     {
                         case 1:
-                            gagTier1.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier1.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier1.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic1.Add(attack.chosenGag.organic);
                             break;
                         case 2:
-                            gagTier2.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier2.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier2.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic2.Add(attack.chosenGag.organic);
                             break;
                         case 3:
-                            gagTier3.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier3.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier3.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic3.Add(attack.chosenGag.organic);
                             break;
                         case 4:
-                            gagTier4.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier4.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier4.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic4.Add(attack.chosenGag.organic);
                             break;
                     }
@@ -1128,19 +1199,47 @@ namespace Toontown_Damage_Calculator
                     switch (attack.target)
                     {
                         case 1:
-                            gagTier1.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier1.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier1.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic1.Add(attack.chosenGag.organic);
                             break;
                         case 2:
-                            gagTier2.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier2.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier2.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic2.Add(attack.chosenGag.organic);
                             break;
                         case 3:
-                            gagTier3.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier3.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier3.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic3.Add(attack.chosenGag.organic);
                             break;
                         case 4:
-                            gagTier4.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier4.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier4.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic4.Add(attack.chosenGag.organic);
                             break;
                     }
@@ -1150,19 +1249,47 @@ namespace Toontown_Damage_Calculator
                     switch (attack.target)
                     {
                         case 1:
-                            gagTier1.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier1.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier1.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic1.Add(attack.chosenGag.organic);
                             break;
                         case 2:
-                            gagTier2.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier2.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier2.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic2.Add(attack.chosenGag.organic);
                             break;
                         case 3:
-                            gagTier3.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier3.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier3.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic3.Add(attack.chosenGag.organic);
                             break;
                         case 4:
-                            gagTier4.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier4.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier4.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic4.Add(attack.chosenGag.organic);
                             break;
                     }
@@ -1197,19 +1324,47 @@ namespace Toontown_Damage_Calculator
                             switch (i)
                             {
                                 case 0:
-                                    gagTier1.Add(attack.chosenGag.gagTier);
+                                    if (attack.notMaxed != 0)
+                                    {
+                                        gagTier1.Add(attack.notMaxed);
+                                    }
+                                    else
+                                    {
+                                        gagTier1.Add(attack.chosenGag.gagTier);
+                                    }
                                     gagOrganic1.Add(attack.chosenGag.organic);
                                     break;
                                 case 1:
-                                    gagTier2.Add(attack.chosenGag.gagTier);
+                                    if (attack.notMaxed != 0)
+                                    {
+                                        gagTier2.Add(attack.notMaxed);
+                                    }
+                                    else
+                                    {
+                                        gagTier2.Add(attack.chosenGag.gagTier);
+                                    }
                                     gagOrganic2.Add(attack.chosenGag.organic);
                                     break;
                                 case 2:
-                                    gagTier3.Add(attack.chosenGag.gagTier);
+                                    if (attack.notMaxed != 0)
+                                    {
+                                        gagTier3.Add(attack.notMaxed);
+                                    }
+                                    else
+                                    {
+                                        gagTier3.Add(attack.chosenGag.gagTier);
+                                    }
                                     gagOrganic3.Add(attack.chosenGag.organic);
                                     break;
                                 case 3:
-                                    gagTier4.Add(attack.chosenGag.gagTier);
+                                    if (attack.notMaxed != 0)
+                                    {
+                                        gagTier4.Add(attack.notMaxed);
+                                    }
+                                    else
+                                    {
+                                        gagTier4.Add(attack.chosenGag.gagTier);
+                                    }
                                     gagOrganic4.Add(attack.chosenGag.organic);
                                     break;
                             }
@@ -1223,19 +1378,47 @@ namespace Toontown_Damage_Calculator
                     switch (attack.target)
                     {
                         case 1:
-                            gagTier1.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier1.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier1.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic1.Add(attack.chosenGag.organic);
                             break;
                         case 2:
-                            gagTier2.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier2.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier2.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic2.Add(attack.chosenGag.organic);
                             break;
                         case 3:
-                            gagTier3.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier3.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier3.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic3.Add(attack.chosenGag.organic);
                             break;
                         case 4:
-                            gagTier4.Add(attack.chosenGag.gagTier);
+                            if (attack.notMaxed != 0)
+                            {
+                                gagTier4.Add(attack.notMaxed);
+                            }
+                            else
+                            {
+                                gagTier4.Add(attack.chosenGag.gagTier);
+                            }
                             gagOrganic4.Add(attack.chosenGag.organic);
                             break;
                         case 5:
@@ -1313,6 +1496,7 @@ namespace Toontown_Damage_Calculator
                     cog1.trapOrganic = false;
                     cog1.ver2 = false;
                     txtboxHealth1.Text = cog1.health.ToString();
+                    txtboxHealth1.Enabled = false;
                     comboxLvl1.SelectedIndex = cog1.lvl;
                     chkboxLured1.Checked = false;
                     comboxLureTurns1.SelectedIndex = 0;
@@ -1335,6 +1519,7 @@ namespace Toontown_Damage_Calculator
                     cog2.trapOrganic = false;
                     cog2.ver2 = false;
                     txtboxHealth2.Text = cog2.health.ToString();
+                    txtboxHealth2.Enabled = false;
                     comboxLvl2.SelectedIndex = cog2.lvl;
                     chkboxLured2.Checked = false;
                     comboxLureTurns2.SelectedIndex = 0;
@@ -1357,6 +1542,7 @@ namespace Toontown_Damage_Calculator
                     cog3.trapOrganic = false;
                     cog3.ver2 = false;
                     txtboxHealth3.Text = cog3.health.ToString();
+                    txtboxHealth3.Enabled = false;
                     comboxLvl3.SelectedIndex = cog3.lvl;
                     chkboxLured3.Checked = false;
                     comboxLureTurns3.SelectedIndex = 0;
@@ -1379,6 +1565,7 @@ namespace Toontown_Damage_Calculator
                     cog4.trapOrganic = false;
                     cog4.ver2 = false;
                     txtboxHealth4.Text = cog4.health.ToString();
+                    txtboxHealth4.Enabled = false;
                     comboxLvl4.SelectedIndex = cog4.lvl;
                     chkboxLured4.Checked = false;
                     comboxLureTurns4.SelectedIndex = 0;
@@ -1485,7 +1672,7 @@ namespace Toontown_Damage_Calculator
                     chkboxVer2[i].Checked = cogs[i].ver2;
                     chkboxVer2[i].Enabled = true;
                     txtboxHealth[i].Text = cogs[i].health.ToString();
-                    txtboxHealth[i].Enabled = true;
+                    txtboxHealth[i].Enabled = false;
                     chkboxOrg[i].Checked = cogs[i].trapOrganic;
                     chkboxOrg[i].Enabled = true;
                     comboxTrap[i].SelectedIndex = cogs[i].trapGag;
@@ -1740,6 +1927,30 @@ namespace Toontown_Damage_Calculator
         private void Form_Load(object sender, EventArgs e)
         {
             // Hi :)
+        }
+
+        private void picboxTrap4_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.picboxTrap4, cog4.trapDamage.ToString());
+        }
+
+        private void picboxTrap3_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.picboxTrap3, cog3.trapDamage.ToString());
+        }
+
+        private void picboxTrap2_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.picboxTrap2, cog2.trapDamage.ToString());
+        }
+
+        private void picboxTrap1_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+            tt.SetToolTip(this.picboxTrap1, cog1.trapDamage.ToString());
         }
     }
 }

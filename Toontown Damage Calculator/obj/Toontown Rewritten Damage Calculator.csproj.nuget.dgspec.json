@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jason\\source\\repos\\ToontownRewrittenDamageCalculator\\Toontown Damage Calculator\\Toontown Damage Calculator.csproj": {}
+    "C:\\Users\\Jason\\source\\repos\\ToontownRewrittenDamageCalculator\\Toontown Damage Calculator\\Toontown Rewritten Damage Calculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jason\\source\\repos\\ToontownRewrittenDamageCalculator\\Toontown Damage Calculator\\Toontown Damage Calculator.csproj": {
+    "C:\\Users\\Jason\\source\\repos\\ToontownRewrittenDamageCalculator\\Toontown Damage Calculator\\Toontown Rewritten Damage Calculator.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jason\\source\\repos\\ToontownRewrittenDamageCalculator\\Toontown Damage Calculator\\Toontown Damage Calculator.csproj",
-        "projectName": "Toontown Damage Calculator",
-        "projectPath": "C:\\Users\\Jason\\source\\repos\\ToontownRewrittenDamageCalculator\\Toontown Damage Calculator\\Toontown Damage Calculator.csproj",
+        "projectUniqueName": "C:\\Users\\Jason\\source\\repos\\ToontownRewrittenDamageCalculator\\Toontown Damage Calculator\\Toontown Rewritten Damage Calculator.csproj",
+        "projectName": "Toontown Rewritten Damage Calculator",
+        "projectPath": "C:\\Users\\Jason\\source\\repos\\ToontownRewrittenDamageCalculator\\Toontown Damage Calculator\\Toontown Rewritten Damage Calculator.csproj",
         "packagesPath": "C:\\Users\\Jason\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Jason\\source\\repos\\ToontownRewrittenDamageCalculator\\Toontown Damage Calculator\\obj\\",
         "projectStyle": "PackageReference",

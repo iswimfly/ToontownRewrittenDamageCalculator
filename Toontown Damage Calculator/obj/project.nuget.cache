@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "q/8InFm3F5RdkbQ5DkzR3+Y+E9CCichHPnnAjou8WwXrcK/j8NnEhXB/8ApkngbgV876k3R7jcpugsNv5EKLPg==",
+  "dgSpecHash": "Csi8s1fZZL1Z3gJfCqAmKKgmSdUmrpT40fHv/Q7fY4r51hOtEfDorSWx/LpIa4wEt0U3uM3V5tLcyJSRg0/suw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Jason\\Desktop\\Banana Mania Modding\\Toontown Damage Calculator\\Toontown Damage Calculator\\Toontown Damage Calculator.csproj",
+  "projectFilePath": "C:\\Users\\Jason\\source\\repos\\ToontownRewrittenDamageCalculator\\Toontown Damage Calculator\\Toontown Rewritten Damage Calculator.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
